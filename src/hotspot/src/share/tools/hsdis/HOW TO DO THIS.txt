@@ -1,0 +1,15 @@
+
+git sparse-checkout set "src/hotspot/src/share/tools/hsdis" ".gitignore"
+
+
+run this:
+    make OS=Linux MINGW=x86_64-w64-mingw32 'AR=$(MINGW)-ar' BINUTILS="C:/cygwin64/usr/src/binutils-2.37-2.src"
+
+https://stackoverflow.com/questions/60034/how-can-you-find-and-replace-text-in-a-file-using-the-windows-command-line-envir#20999154
+run this:
+    powershell -Command "(Get-Content build\Linux-amd64\bfd\Makefile) -replace 'SUBDIRS = doc po', 'SUBDIRS = po' | Out-File -encoding ASCII build\Linux-amd64\bfd\Makefile"
+somehow it will still remain UTF-8, well ascii is the same thing as UTF-8 if charCode < something
+
+run make again
+
+`build\Linux-amd64\hsdis-amd64.dll`
