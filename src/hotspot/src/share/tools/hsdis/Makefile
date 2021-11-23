@@ -195,7 +195,8 @@ SOURCE		= hsdis.c
 
 LIBRARIES =	$(TARGET_DIR)/bfd/libbfd.a \
 		$(TARGET_DIR)/opcodes/libopcodes.a \
-		$(TARGET_DIR)/libiberty/libiberty.a
+		$(TARGET_DIR)/libiberty/libiberty.a \
+		$(TARGET_DIR)/zlib/libz.a
 
 DEMO_TARGET	= $(TARGET_DIR)/hsdis-demo
 DEMO_SOURCE	= hsdis-demo.c
